@@ -7,6 +7,10 @@ $(document).ajaxStop(function(){
 })
 
 $(function(){
+    // 左边切换二级分类功能
+    $('.category').click(function(){
+        $('.child').stop().slideToggle();
+    })
     // 点击topbar的icon-left按钮。侧边栏切换隐藏
     $('.icon-left').click(function(){
         $('.lt-aside').toggleClass('hidemenu');

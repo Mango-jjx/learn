@@ -83,6 +83,10 @@ ol,ul{
     padding-left: 40px;
     border-left: 3px solid transparent;
 }
+.lt-aside .nav li a.current{
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
 .lt-aside .nav .child{
     display: none;
 }
