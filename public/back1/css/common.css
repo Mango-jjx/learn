@@ -1,3 +1,25 @@
+/* 公共初始化样式 */
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+ol,ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.mt_150{
+    margin-top: 150px;
+}
+.mt_20{
+    margin-top: 20px;
+}
+.red{
+    color: #A94442;
+}
+
 .body_bg{
     background-color: #222D32;
 }
@@ -9,6 +31,109 @@
     font-size: 18px;
 }
 
-.mt_150{
-    margin-top: 150px;
+
+/* 主页公共部分样式 */
+/* 左侧 */
+.lt-aside{
+    width: 180px;
+    height: 100%;
+    background-color: #222D32;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transition: all 1s;
+}
+.lt-aside.hidemenu{
+    left:-180px;
+}
+.lt-aside .brand a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    background-color: #367FA9;
+}
+.lt-aside .user{
+    height: 180px;
+    width: 100%;
+    padding-top: 30px;
+}
+.lt-aside .user img{
+    height: 80px;
+    width: 80px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.lt-aside .user p{
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+}
+.lt-aside .nav li a{
+    display: block;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    border-left: 3px solid transparent;
+}
+.lt-aside .nav li a.current{
+    border-left:3px solid #006699;
+    background-color: #1D1F21;
+}
+.lt-aside li .child{
+    display: none;
+}
+.lt-aside li .child a{
+    padding-left: 60px;
+}
+
+/* 右侧 */
+.lt-main{
+    height: 2000px;
+    background: pink;
+    width: 100%;
+    padding-left: 180px;
+    padding-top: 50px;
+    transition: all 1s;
+}
+.lt-main.hidemenu{
+    padding-left: 0px;
+}
+.lt-main .lt-topbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #3C8DBC;
+    height: 50px;
+    width: 100%;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt-main .lt-topbar.hidemenu{
+    padding-left: 0px;
+}
+.lt-main .lt-topbar a{
+    height: 50px;
+    width: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    line-height: 50px;
+}
+.breadcrumb li.active a{
+    color: #777;
+}
+
+.echarts_left,
+.echarts_right{
+    height: 400px;
+    width: 48%;
+    background-color: skyblue;
 }

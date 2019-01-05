@@ -114,6 +114,7 @@ ul,ol{
     left: 0;
     padding-left: 180px;
     transition: all 1s;
+    z-index: 998;
 }
 .lt_main .lt_topbar.hidemenu{
     padding-left: 0px;
@@ -125,4 +126,10 @@ ul,ol{
     text-align: center;
     color: #fff;
     font-size: 20px;
+}
+.echarts_left,
+.echarts_right {
+  height: 400px;
+  width: 48%;
+  background-color: skyblue;
 }
