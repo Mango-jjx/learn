@@ -96,8 +96,8 @@ ol,ul{
 
 /* 右侧 */
 .lt-main{
-    height: 2000px;
-    background: pink;
+    /* height: 2000px;
+    background: pink; */
     width: 100%;
     padding-left: 180px;
     padding-top: 50px;
@@ -135,5 +135,5 @@ ol,ul{
 .echarts_right{
     height: 400px;
     width: 48%;
-    background-color: skyblue;
+    /* background-color: skyblue; */
 }

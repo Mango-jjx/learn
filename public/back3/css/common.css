@@ -96,8 +96,8 @@ ol,ul{
 
 /* 右侧 */
 .lt-main{
-    height: 2000px;
-    background-color:pink;
+    /* height: 2000px; */
+    /* background-color:pink; */
     padding-left: 180px;
     padding-top: 50px;
     transition: all 1s;
@@ -128,4 +128,11 @@ ol,ul{
 }
 .breadcrumb li.active a{
     color: #777;
+}
+
+.echarts-left,
+.echarts-right{
+    height: 400px;
+    width: 48%;
+    /* background-color: skyblue; */
 }

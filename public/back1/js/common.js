@@ -28,7 +28,7 @@ $(function () {
     // 点击topbar的icon-right退出功能
     $('.icon-logout').click(function () {
         // 显示模态框
-        $('.modal').modal('show');
+        $('#myModal').modal('show');
     })
 
     // 点击模态框的退出按钮退出

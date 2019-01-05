@@ -96,10 +96,10 @@ ul,ol{
 
 /* 右侧 */
 .lt_main{
-    height: 2000px;
+    /* height: 2000px; */
     padding-left: 180px;
     padding-top: 50px;
-    background-color: pink;
+    /* background-color: pink; */
     transition: all 1s;
 }
 .lt_main.hidemenu{
@@ -131,5 +131,5 @@ ul,ol{
 .echarts_right {
   height: 400px;
   width: 48%;
-  background-color: skyblue;
+  /* background-color: skyblue; */
 }

@@ -107,7 +107,6 @@ ul {
   padding-left: 180px;
   padding-top: 50px;
   height: 2000px;
-  background-color: pink;
   transition: all 1s;
 }
 .lt_main.hidemenu {
@@ -140,5 +139,11 @@ ul {
 .echarts_right {
   height: 400px;
   width: 48%;
-  background-color: skyblue;
+}
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  /* 设置单位格内容 垂直对齐方式 */
+  vertical-align: middle;
 }

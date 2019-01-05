@@ -20,7 +20,7 @@ $(function(){
 
     // 退出功能，显示模态框
     $('.icon-logout').click(function(){
-        $('.modal').modal('show');
+        $('#myModal').modal('show');
     })
 
     // 退出功能

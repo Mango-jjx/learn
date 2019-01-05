@@ -1,10 +1,8 @@
-
-// 图形
 $(function () {
 
     // 1、柱形图
     // 基于准备好的dom，初始化echarts实例
-    var echartsleft = echarts.init(document.querySelector('.echarts_left'));
+    var echartsleft = echarts.init(document.querySelector('.echarts-left'));
 
     // 指定图表的配置项和数据
     var option1 = {
@@ -22,19 +20,19 @@ $(function () {
         series: [{
             name: '人数',
             type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
+            data: [50, 200, 36, 100, 10, 20]
         },{
             name: '销量',
             type: 'bar',
-            data: [5, 20, 36, 10, 10, 20]
+            data: [50, 200, 360, 10, 10, 209]
         }]
     };
 
     // 使用刚指定的配置项和数据显示图表。
     echartsleft.setOption(option1);
 
-    // 2、饼状图
-    var echartsright = echarts.init(document.querySelector('.echarts_right'));
+    // 2、饼图
+    var echartsright = echarts.init(document.querySelector('.echarts-right'));
 
     // 指定图表的配置项和数据
     var option2 = {
