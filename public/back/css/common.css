@@ -133,3 +133,14 @@ ul,ol{
   width: 48%;
   /* background-color: skyblue; */
 }
+
+.breadcrumb li.active a{
+    color: #777;
+}
+
+/* 用户管理 */
+.table.table-bordered th,
+.table.table-bordered td{
+    text-align: center;
+    vertical-align: middle;
+}
