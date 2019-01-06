@@ -65,14 +65,59 @@
         <div class="container-fluid">
             <ol class="breadcrumb mt_20">
                 <li><a href="index.html">管理系统</a></li>
-                <li class="active"><a href="#">首页</a></li>
+                <li class="active"><a href="#">分类管理</a></li>
+                <li class="active"><a href="#">一级分类</a></li>
             </ol>
+
+            <!-- 添加分类按钮 -->
+            <button class="btn btn-default" id="addcate">添加分类</button>
+
+            <!-- 表格 -->
+            <table class="table table-bordered table-hover mt_20">
+                <thead>
+                    <tr>
+                        <th style="width:20%">序号</th>
+                        <th style="width:80%">一级分类名</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 挖个坑 -->
+                </tbody>
+            </table>
+
+            <!-- 分页 -->
+            <div class="pull-right">
+                <ul id="paginator"></ul>
+            </div>
         </div>
 
-        
+
     </div>
 
-    <!-- Modal -->
+    <!-- 添加分类模态框 -->
+    <div class="modal fade" id="addModal" tabindex="-1">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content">
+                <form id="form">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="categoryName" placeholder="请输入一级分类名称">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary" id="addBtn">添加</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 退出模态框 -->
     <div class="modal fade" id="myModal" tabindex="-1">
         <div class="modal-dialog modal-sm" role="document">
             <div class="modal-content">
@@ -91,12 +136,25 @@
         </div>
     </div>
 
+    <!-- 模板引擎，表格 -->
+    <script type="text/html" id="firstTpl">
+        {{each rows v i}}
+        <tr>
+            <td>{{i+1+(page-1)*size}}</td>
+            <td>{{v.categoryName}}</td>
+        </tr>
+        {{/each}}
+    </script>
+
     <script src="./lib/jquery/jquery.min.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/islogin.js"></script>
+    <script src="./js/first.js"></script>
 </body>
 
 </html>

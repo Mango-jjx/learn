@@ -3,7 +3,7 @@
 $(function () {
     // 进度条
     $(document).ajaxStart(function () {
-        console.log(1);
+        // console.log(1);
         NProgress.start();
     })
     $(document).ajaxStop(function () {
