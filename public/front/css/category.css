@@ -1,0 +1,41 @@
+/* 中间区域 */
+.lt-main .main-left{
+    width: 90px;
+    height: 100%;
+    /* background-color: pink; */
+    float: left;
+    position: relative;
+}
+.main-left li a{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #e3e4e5;
+    text-align: center;
+    line-height: 50px;
+    color: #333;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.main-left li a.current{
+    border-right: none;
+    background-color: #fff;
+}
+.lt-main .main-right{
+    height: 100%;
+    overflow: hidden;
+    /* background-color: skyblue; */
+    position: relative;
+}
+.main-right li{
+    float: left;
+    width: 33.3%;
+}
+.main-right li img{
+    width: 70px;
+    height: 50px;
+    margin: 0 auto;
+}
+.main-right li p{
+    text-align: center;
+}

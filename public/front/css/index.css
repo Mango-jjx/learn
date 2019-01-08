@@ -1,0 +1,35 @@
+/* 分类部分 */
+.lt-nav{
+    padding: 10px;
+}
+.lt-nav li{
+    float: left;
+    width: 33.3%;
+}
+.lt-nav li a{
+    display: block;
+}
+
+/* 产品区域 */
+.lt-product{
+    padding: 10px;
+}
+.lt-product li{
+   width: 48%;
+   height: 48%;
+   float: left;
+   border: 1px solid #000;
+   border-radius: 5px;
+   padding: 10px;
+   margin-bottom: 20px;
+   text-align: center;
+}
+.lt-product li:nth-child(even){
+    float: right;
+}
+.pro-left{
+    color: red;
+}
+.pro-right{
+    text-decoration: line-through;
+}
