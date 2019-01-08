@@ -115,11 +115,14 @@
                                 <ul class="dropdown-menu">
                                     <!-- 挖个坑 -->
                                 </ul>
+
+                                <!-- 隐藏域，用于上传分类id -->
+                                <input type="hidden" name="categoryId">
                             </div>
                         </div>
                         <!-- input框 -->
                         <div class="form-group">
-                            <input type="text" class="form-control" name="brandName" placeholder="请输入一级分类名称">
+                            <input type="text" class="form-control" name="brandName" placeholder="请输入二级分类名称">
                         </div>
                         <!-- 上传图片 -->
                         <div class="form-group">
@@ -129,6 +132,9 @@
                         <!-- 图片区域 -->
                         <div class="form-group" id="imgbox">
                             <img src="./images/none.png" alt="" style="width:100px">
+
+                            <!-- 隐藏域，用于上传图片地址 -->
+                            <input type="hidden" name="brandLogo">
                         </div>
                     </div>
                     <!-- 底部 -->
@@ -177,7 +183,7 @@
     <!-- 下拉框模板引擎 -->
     <script type="text/html" id="ulTpl">
         {{each rows v i}}
-        <li><a href="#">{{v.categoryName}}</a></li>
+        <li><a href="#" data-id={{v.id}}>{{v.categoryName}}</a></li>
         {{/each}}
     </script>
 

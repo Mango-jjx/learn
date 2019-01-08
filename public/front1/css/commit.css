@@ -1,0 +1,89 @@
+ul,ol{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.lt-container{
+    height: 100%;
+    width: 100%;
+    background-color: pink;
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+    position: relative;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    overflow: hidden;
+}
+
+/* 头部 */
+.lt-header{
+    height: 45px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #006699;
+    padding:0 45px;
+}
+.lt-header .icon-left,
+.lt-header .icon-right{
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: #fff;
+    line-height: 45px;
+}
+.lt-header .icon-left{
+    left: 0;
+}
+.lt-header .icon-right{
+    right: 0;
+}
+.lt-header h3{
+    font-size: 20px;
+    font-weight: normal;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    margin: 0;
+}
+
+/* 中间部分 */
+.lt-main{
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+}
+
+
+/* 底部 */
+.lt-footer{
+    height: 55px;
+    width: 100%;
+    background-color: #006699;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.lt-footer li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.lt-footer li a{
+    display: block;
+    padding-top: 8px;
+    color: #fff;
+}
+.lt-footer li a p{
+    color: #fff;
+    margin: 0;
+}

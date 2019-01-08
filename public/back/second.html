@@ -77,8 +77,8 @@
                     <tr>
                         <th>序号</th>
                         <th>一级分类名称</th>
-                        <th>一级分类名称</th>
-                        <th>一级分类名称</th>
+                        <th>二级分类名称</th>
+                        <th>二级分类LOGO</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -116,6 +116,9 @@
                                 <ul class="dropdown-menu">
                                     <!-- 挖个坑 -->
                                 </ul>
+
+                                <!-- 隐藏域,给后台传一级分类id -->
+                                <input type="hidden" name="categoryId">
                             </div>
                         </div>
                         <!-- 分类名称 -->
@@ -131,6 +134,9 @@
                         <!-- 图片显示 -->
                         <div class="form-group" id="myBox">
                             <img src="./images/none.png" alt="" style="width:100px">
+
+                            <!-- 隐藏域，给后台传图片地址 -->
+                            <input type="hidden" name="brandLogo"> 
                         </div>
                     </div>
                     <!-- 底部 -->
@@ -179,7 +185,7 @@
     <!-- 添加按钮模态框ul渲染 -->
     <script type="text/html" id="ulTpl">
         {{each rows v i}}
-         <li><a href="#">{{v.categoryName}}</a></li>
+         <li><a data-id={{v.id}} href="#">{{v.categoryName}}</a></li>
         {{/each}}
     </script>
 

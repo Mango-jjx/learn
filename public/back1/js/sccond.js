@@ -56,19 +56,6 @@ $(function () {
         })
     })
 
-    // 表单验证
-    $('#form').bootstrapValidator({
-        fields: {
-            brandName: {
-                validators: {
-                    notEmpty: {
-                        message: "二级分类名称不能为空"
-                    }
-                }
-            }
-        }
-    })
-    
     // 图片预览
     $("#fileupload").fileupload({
         dataType: "json",
@@ -77,13 +64,83 @@ $(function () {
         done: function (e, data) {
             // console.log(data);
             var src = data.result.picAddr;
-            $('#imgbox img').attr('src',src);
+            $('#imgbox img').attr('src', src);
+
+            $('[name="brandLogo"]').val(src);
+
+            $("#form").data('bootstrapValidator').updateStatus("brandLogo", 'VALID');
         }
     });
-    
+
     // 下拉菜单选择功能
-    $('.dropdown-menu').on('click','a',function(){
+    $('.dropdown-menu').on('click', 'a', function () {
         var txt = $(this).text();
         $('.adddropdown').text(txt);
+
+        var id = $(this).data('id');
+        $('[name="categoryId"]').val(id);
+
+        $("#form").data('bootstrapValidator').updateStatus("categoryId", 'VALID');
     })
+
+    // 表单验证
+    $('#form').bootstrapValidator({
+        //1. 指定不校验的类型，默认为[':disabled', ':hidden', ':not(:visible)'],可以不设置
+        excluded: [],
+
+        feedbackIcons: {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+
+        fields: {
+            brandName: {
+                validators: {
+                    notEmpty: {
+                        message: "二级分类名称不能为空"
+                    }
+                }
+            },
+            categoryId: {
+                validators: {
+                    notEmpty: {
+                        message: '请选择一级分类'
+                    }
+                }
+            },
+            brandLogo: {
+                validators: {
+                    notEmpty: {
+                        message: '请选择图片'
+                    }
+                }
+            }
+        }
+    })
+
+    // 表单校验成功事件
+    $("#form").on('success.form.bv', function (e) {
+        e.preventDefault();
+        //使用ajax提交逻辑
+        $.ajax({
+            type: 'post',
+            url: '/category/addSecondCategory',
+            data: $('#form').serialize(),
+            datatype: 'json',
+            success: function (info) {
+                // console.log(info);
+                if (info.success) {
+                    $('#secondModal').modal('hide');
+                    currentPage = 1;
+                    render();
+
+                    $("#form").data('bootstrapValidator').resetForm(true);
+                    $('.adddropdown').text('请输入一级分类');
+                    $('#imgbox img').attr('src','./images/none.png');
+                }
+            }
+        })
+    });
+
 })
