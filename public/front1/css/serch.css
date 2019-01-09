@@ -1,0 +1,44 @@
+.lt-main .main-serch{
+    padding: 10px;
+    position: relative;
+}
+.lt-main .main-serch input{
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #007aff;
+    margin: 0;
+    font-size: 12px;
+}
+.main-serch button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 0 5px 5px 0;
+}
+.main-history{
+    padding: 10px;
+}
+.main-history .title{
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    font-size: 12px;
+}
+.main-history .content ul{
+    border: 1px dashed red;
+}
+.main-history .content li{
+    height: 30px;
+    line-height: 30px;
+    border-bottom: 1px dashed red;
+    font-size: 12px;
+}
+.main-history .content li a{
+    padding: 0 10px;
+}
+.main-history .content li i{
+    line-height: 30px;
+}
+.main-history .content li:last-child{
+    border-bottom:none;
+}

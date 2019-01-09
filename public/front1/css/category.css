@@ -1,0 +1,42 @@
+/* 中间内容 */
+.lt-main .main-left{
+    width: 90px;
+    height: 100%;
+    /* background-color: pink; */
+    float: left;
+    position: relative;
+}
+.lt-main .main-left li a{
+    display: block;
+    height: 50px;
+    width: 100%;
+    background-color: #e3e4e5;
+    line-height: 50px;
+    text-align: center;
+    color: #333;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lt-main .main-left li a.current{
+    background-color: #fff;
+    border-right: none;
+}
+
+
+
+.lt-main .main-right{
+    height: 100%;
+    overflow: hidden;
+    /* background-color: orange; */
+    position: relative;
+}
+.main-right li{
+    width: 33.3%;
+    float: left;
+    text-align: center;
+}
+.main-right li img{
+    width: 70px;
+    height: 50px;
+    margin: 0 auto;
+}

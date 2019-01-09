@@ -3,6 +3,10 @@ ul,ol{
     margin: 0;
     padding: 0;
 }
+img{
+    display: block;
+    width: 100%;
+}
 
 html,body{
     height: 100%;
@@ -11,7 +15,7 @@ html,body{
 .lt-container{
     height: 100%;
     width: 100%;
-    background-color: pink;
+    background-color: #fff;
     margin: 0 auto;
     max-width: 640px;
     min-width: 320px;
@@ -60,7 +64,8 @@ html,body{
 .lt-main{
     height: 100%;
     width: 100%;
-    background-color: orange;
+    /* background-color: orange; */
+    position: relative;
 }
 
 
@@ -82,6 +87,12 @@ html,body{
     display: block;
     padding-top: 8px;
     color: #fff;
+}
+.lt-footer li a.current{
+    color: orange;
+}
+.lt-footer li a.current p{
+    color: orange;
 }
 .lt-footer li a p{
     color: #fff;
